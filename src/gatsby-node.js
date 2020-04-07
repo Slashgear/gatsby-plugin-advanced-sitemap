@@ -208,9 +208,8 @@ const serialize = ({ ...sources } = {},{ site, allSitePage }, mapping) => {
                         return
                     }
 
-                    if (type === `allMarkdownRemark` || type === `allMdx`) {
-                        node = serializeMarkdownNodes(node)
-                    }
+                    node.feature_image = node.context.feature_image;
+
 
                     // if a mapping path is set, e. g. `/blog/tag` for tags, update the path
                     // to reflect this. This prevents mapping issues, when we later update

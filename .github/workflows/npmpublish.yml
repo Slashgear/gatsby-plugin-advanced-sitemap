@@ -3,10 +3,9 @@
 
 name: Node.js Package
 
-oon:
-  push:
-    tags:
-      - '*'
+on:
+  release:
+    types: [created]
 
 jobs:
   publish-gpr:
